@@ -8,7 +8,7 @@ To make them pass:
 - delete everything from mek/installed directory,
 - delete config/config.db file.
 
-I don't know why yet, but tests are failing when executed too quickly one ofter another. I assume that pytest doesn't wait enough time after completing one test file and moving on. To make them work, launh them in that order:
+I don't know why yet, but tests are failing when executed too quickly one ofter another. I assume that pytest doesn't wait enough time after completing one test file and moving on. To make them work, launch them in that order:
 - pytest -vv tests/test_100_prepare_env_with_datainterface.py
 - pytest -vv tests/test_101_megatech.py tests/test_110_download_megamek.py tests/test_120_install_megamek.py
 - pytest -vv tests/test_130_megatech_checkinstall.py
