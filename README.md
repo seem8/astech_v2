@@ -9,10 +9,10 @@ To make them pass:
 - delete config/config.db file.
 
 I don't know why yet, but tests are failing when executed too quickly one ofter another. I assume that pytest doesn't wait enough time after completing one test file and moving on. To make them work, launh them in that order:
-pytest -vv tests/test_100_prepare_env_with_datainterface.py
-pytest -vv tests/test_101_megatech.py tests/test_110_download_megamek.py tests/test_120_install_megamek.py
-pytest -vv tests/test_130_megatech_checkinstall.py
-pytest -vv tests/test_140_server_controls.py
+- pytest -vv tests/test_100_prepare_env_with_datainterface.py
+- pytest -vv tests/test_101_megatech.py tests/test_110_download_megamek.py tests/test_120_install_megamek.py
+- pytest -vv tests/test_130_megatech_checkinstall.py
+- pytest -vv tests/test_140_server_controls.py
 
 test_120_install_megamek is, by using os.remove, essentially doing "rm -fr" on some directories (tries to remove installed Megamek), so be very caferull if You, for some reason, like to make hard links to root inside project directory.
 
