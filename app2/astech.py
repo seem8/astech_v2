@@ -9,7 +9,7 @@ mail: mail [at] lukaszposadowski.pl
 import tarfile, urllib.request, shutil  # MegaMek download and install/uninstall
 import os, os.path                      # ------ // --------
 import subprocess                       # running and stopping MegaMek
-import datainterface as dit      # sqlite commands
+from . import datainterface as dit      # sqlite commands
 
 
 ###########################################
